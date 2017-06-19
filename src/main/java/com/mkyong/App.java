@@ -12,14 +12,16 @@ public class App {
 
         String[] springConfig  =
                 {
-                        "spring/batch/jobs/job-hello-world.xml"
+                        "spring/batch/jobs/job-hello-world.xml",
+                        "spring/batch/jobs/readMultipleFiles.xml"
+
                 };
 
         ApplicationContext context =
                 new ClassPathXmlApplicationContext(springConfig);
 
         JobLauncher jobLauncher = (JobLauncher) context.getBean("jobLauncher");
-        Job job = (Job) context.getBean("helloWorldJob1");
+        Job job = (Job) context.getBean("readMultipleFilesJob4");
 
         try {
 
