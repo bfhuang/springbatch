@@ -13,7 +13,8 @@ public class App {
         String[] springConfig  =
                 {
                         "spring/batch/jobs/job-hello-world.xml",
-                        "spring/batch/jobs/readMultipleFiles.xml"
+                        "spring/batch/jobs/readMultipleFiles.xml",
+                        "spring/batch/jobs/readCsvFileAndWriteToDatabase.xml"
 
                 };
 
@@ -21,7 +22,7 @@ public class App {
                 new ClassPathXmlApplicationContext(springConfig);
 
         JobLauncher jobLauncher = (JobLauncher) context.getBean("jobLauncher");
-        Job job = (Job) context.getBean("readMultipleFilesJob4");
+        Job job = (Job) context.getBean("readCsvFileAndWriteToDatabaseJob5");
 
         try {
 
